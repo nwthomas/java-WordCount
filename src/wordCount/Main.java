@@ -4,9 +4,10 @@ import java.util.*;
 
 public class Main
 {
-	public static ArrayList workCount()
+	private static void wordCount()
 	{
-		// Finish
+		WordCount phrase = new WordCount();
+		System.out.println(phrase.getPhrase());
 	}
 
 	public static void main(String[] args)
