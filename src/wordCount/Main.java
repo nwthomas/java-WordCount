@@ -36,6 +36,18 @@ public class Main
 		}
 
 		// Sort HashMap into array from biggest to smallest
+		ArrayList<HashMap.Entry<String, Integer>> sortedMap = new ArrayList<HashMap.Entry<String, Integer>>();
+		sortedMap.addAll(wordMap.entrySet());
+
+		Collections.sort(sortedMap, new Comparator<Map.Entry<String, Integer>>()
+		{
+			public int compare (HashMap.Entry<String, Integer> o1, HashMap.Entry<String, Integer> o2)
+			{
+				return o2.getValue().compareTo(o1.getValue());
+			}
+		});
+
+		System.out.println(sortedMap);
 
 		// Bring the top 50 words to the screen from biggest on down
 	}
