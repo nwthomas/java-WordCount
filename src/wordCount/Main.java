@@ -47,9 +47,13 @@ public class Main
 			}
 		});
 
-		System.out.println(sortedMap);
 
 		// Bring the top 50 words to the screen from biggest on down
+		for (int i = 0; i < 50; i++)
+		{
+			System.out.println("The #" + (i + 1) + " most common word was \"" + sortedMap.get(i).getKey() + ".\" It occured " + sortedMap.get(i).getValue() + " times.");
+			System.out.println();
+		}
 	}
 
 	public static void main(String[] args)
